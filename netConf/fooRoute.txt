@@ -1,0 +1,6 @@
+up route add -net 192.202.128.0 netmask 255.255.255.128 gw 192.202.0.2
+up route add -net 192.202.4.0 netmask 255.255.252.0 gw 192.202.0.2
+up route add -net 192.202.0.8 netmask 255.255.255.248 gw 192.202.0.2
+up route add -net 192.202.2.0 netmask 255.255.254.0 gw 192.202.0.6
+up route add -net 192.202.1.0 netmask 255.255.255.0 gw 192.202.0.6
+up route add -net 192.202.0.16 netmask 255.255.255.248 gw 192.202.0.6

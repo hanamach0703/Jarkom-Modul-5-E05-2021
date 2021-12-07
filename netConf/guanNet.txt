@@ -1,0 +1,23 @@
+auto lo
+iface lo inet loopback
+
+auto eth 0
+iface eth 0 inet static
+address 192.202.0.6
+netmask 255.255.255.252
+gateway 192.202.0.5
+
+auto eth 1
+iface eth 1 inet static
+address 192.202.2.1
+netmask 255.255.254.0
+
+auto eth 2
+iface eth 2 inet static
+address 192.202.1.1
+netmask 255.255.255.0
+
+auto eth 3
+iface eth 3 inet static
+address 192.202.0.17
+netmask 255.255.255.248
