@@ -7,7 +7,7 @@ echo '# What servers should the DHCP relay forward requests to?
 SERVERS="192.202.0.10"
 
 # On what interfaces should the DHCP relay (dhrelay) serve DHCP requests?
-INTERFACES="eth1 eth2"
+INTERFACES="eth1 eth0 eth2"
 
 # Additional options that are passed to the DHCP relay daemon?
 OPTIONS="" '> /etc/default/isc-dhcp-relay
