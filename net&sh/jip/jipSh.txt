@@ -1,0 +1,51 @@
+#!/bin/bash
+echo nameserver 192.168.122.1 >> /etc/resolv.conf
+
+apt-get update
+apt-get install isc-dhcp-server -y
+
+printf'INTERFACES="eth0"' > /etc/default/isc-dhcp-server
+
+printf 'subnet 192.202.0.8 netmask 255.255.255.248{
+}
+
+subnet 192.202.0.128 netmask 255.255.255.128{
+    range 192.202.0.130 192.202.0.229;
+    option routers 192.202.0.129;
+    option broadcast-address 192.202.0.255;
+    option domain-name-servers 192.202.0.11;
+    default-lease-time 600;
+    max-lease-time 7200;
+}
+
+subnet 192.202.4.0 netmask 255.255.252.0{
+    range 192.202.4.2 192.202.6.191;
+    option routers 192.202.4.1;
+    option broadcast-address 192.202.7.255;
+    option domain-name-servers 192.202.0.11;
+    default-lease-time 600;
+    max-lease-time 7200;
+}
+
+subnet 192.202.2.0 netmask 255.255.254.0{
+    range 192.202.2.2 192.202.3.46;
+    option routers 192.202.2.1;
+    option broadcast-address 192.202.3.255;
+    option domain-name-servers 192.202.0.11;
+    default-lease-time 600;
+    max-lease-time 7200;
+}
+
+subnet 192.202.1.0 netmask 255.255.255.0{
+    range 192.202.1.2 192.202.1.201;
+    option routers 192.202.1.1;
+    option broadcast-address 192.202.1.255;
+    option domain-name-servers 192.202.0.11;
+    default-lease-time 600;
+    max-lease-time 7200;
+}
+' >> /etc/dhcp/dhcpd.conf
+
+service isc-dhcp-server restart
+
+service isc-dhcp-server status

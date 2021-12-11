@@ -2,22 +2,22 @@ auto lo
 iface lo inet loopback
 
 auto eth0
-iface eth1 inet static
+iface eth0 inet static
 address 192.202.0.2
-netmask 255.255.255.252 
+netmask 255.255.255.252
 gateway 192.202.0.1
 
-auto eth 1
-iface eth 1 inet static
+auto eth1
+iface eth1 inet static
 address 192.202.4.1
 netmask 255.255.252.0
 
-auto eth 2
-iface eth 2 inet static
-address 192.202.128.1 
+auto eth2
+iface eth2 inet static
+address 192.202.0.129
 netmask 255.255.255.128
 
-auto eth 3
-iface eth 3 inet static
+auto eth3
+iface eth3 inet static
 address 192.202.0.9
 netmask 255.255.255.248
