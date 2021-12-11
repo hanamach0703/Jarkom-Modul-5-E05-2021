@@ -4,13 +4,11 @@ Nama Kelompok:
 1. Muhammad Rafki Mardi 05111940000054
 2. Hana Machmudah 05111940000072
 3. Achmad Fadillah  05111940000155
-4.  <img width="700" alt="" src="">
 
-
-Pada praktikum ini dilakukan dengan menggunakan VLSM.
 
 ## (A) Tugas pertama kalian yaitu membuat topologi jaringan sesuai dengan rancangan yang diberikan Luffy dibawah ini:
-
+   
+   Pada praktikum ini dilakukan dengan menggunakan VLSM.
    
    <img width="700" alt="topologi" src="https://user-images.githubusercontent.com/66562311/145678801-a188e02d-87b4-47b4-9c3b-38a91ce40619.PNG">
    
